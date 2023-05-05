@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="CvEntityDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="CvEntityDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="adres">
           <Key>
             <PropertyRef Name="id" />
@@ -28,7 +28,7 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="bilgiler" Type="varchar" MaxLength="500" />
-          <Property Name="egitim" Type="varchar" MaxLength="500" />
+          <Property Name="egitim" Type="varchar" MaxLength="1000" />
           <Property Name="isDeneyimleri" Type="varchar" MaxLength="1000" />
         </EntityType>
         <EntityType Name="iletisim">
@@ -39,6 +39,7 @@
           <Property Name="adsoyad" Type="varchar" MaxLength="50" />
           <Property Name="mail" Type="varchar" MaxLength="50" />
           <Property Name="mesaj" Type="varchar" MaxLength="500" />
+          <Property Name="konu" Type="varchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="yetenekler">
           <Key>
@@ -55,8 +56,7 @@
           <EntitySet Name="iletisim" EntityType="Self.iletisim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="yetenekler" EntityType="Self.yetenekler" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CvEntityDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -83,7 +83,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="bilgiler" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="egitim" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="egitim" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
           <Property Name="isDeneyimleri" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="iletisim">
@@ -94,6 +94,7 @@
           <Property Name="adsoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="mesaj" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="konu" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="yetenekler">
           <Key>
@@ -148,6 +149,7 @@
           <EntitySetMapping Name="iletisim">
             <EntityTypeMapping TypeName="CvEntityDBModel.iletisim">
               <MappingFragment StoreEntitySet="iletisim">
+                <ScalarProperty Name="konu" ColumnName="konu" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="adsoyad" ColumnName="adsoyad" />
                 <ScalarProperty Name="mail" ColumnName="mail" />

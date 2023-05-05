@@ -76,6 +76,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="deneyimler.aspx" />
+    <Content Include="yeniYetenek.aspx" />
+    <Content Include="yeteneklerim.aspx" />
     <Content Include="model\CvEntityContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>CvEntityContext.Context.cs</LastGenOutput>
@@ -100,12 +103,40 @@
     <Content Include="web\w3layouts-License.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin.Master.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.Master.designer.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deneyimler.aspx.cs">
+      <DependentUpon>deneyimler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deneyimler.aspx.designer.cs">
+      <DependentUpon>deneyimler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yeniYetenek.aspx.cs">
+      <DependentUpon>yeniYetenek.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yeniYetenek.aspx.designer.cs">
+      <DependentUpon>yeniYetenek.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yeteneklerim.aspx.cs">
+      <DependentUpon>yeteneklerim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yeteneklerim.aspx.designer.cs">
+      <DependentUpon>yeteneklerim.aspx</DependentUpon>
     </Compile>
     <Compile Include="model\adres.cs">
       <DependentUpon>CvEntityContext.tt</DependentUpon>
@@ -147,6 +178,7 @@
     <Content Include="model\CvEntityContext.edmx.diagram">
       <DependentUpon>CvEntityContext.edmx</DependentUpon>
     </Content>
+    <Content Include="admin.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

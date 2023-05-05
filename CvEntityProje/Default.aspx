@@ -36,8 +36,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="sidenav text-center">
         <div class="side_top">
             <img src="web/images/about.jpg" alt="news image" class="img-fluid navimg">
-            <h1 class="top_hd mt-2"><a href="index.html">Conjoint</a></h1>
-            <p class="top_hdp mt-2">Fermentum lobortis non tristique ante proin sociis</p>
+            <h1 class="top_hd mt-2"><a href="Default.aspx">Asım Mutlu</a></h1>
+            <p class="top_hdp mt-2">Junior Full Stack Developer</p>
         </div>
         <!-- header -->
         <header>
@@ -144,7 +144,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <asp:TextBox ID="txtKonuBasligi" runat="server" placeholder="Konu Başlığı"></asp:TextBox>
                     <asp:TextBox ID="txtMesaj" runat="server" placeholder="Mesajınız" TextMode="MultiLine" Height="50"></asp:TextBox>
-                    <asp:Button ID="btnGonder" runat="server" class="btn btn-info" Text="Gönder" />
+                    <asp:Button ID="btnGonder" type="button" runat="server" class="btn btn-info" Text="Gönder" OnClick="btnGonder_Click" />
                     <asp:Button ID="btnVazgec" runat="server" class="btn btn-warning" Text="Vazgeç" />
                     <div class="clearfix"></div>
                 </form>
@@ -158,6 +158,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </section>
         <!-- //contact -->
     </div>
-
+<%--    <script>
+        let btnGonder = document.getElementById("btnGonder");
+        btnGonder.addEventListener("click", () => {
+        setTimeout(function selamVer() {
+            alert("Başarıyla iletilmiştir.");
+        },5000);
+        });
+    </script>--%>
 </body>
 </html>

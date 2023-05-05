@@ -25,5 +25,26 @@ namespace CvEntityProje
             rptYetenek.DataSource = db.yetenekler.ToList();
             rptYetenek.DataBind();
         }
+
+        public void Temizle()
+        {
+            txtAd.Text = "";
+            txtKonuBasligi.Text = "";
+            txtMail.Text = "";
+            txtMesaj.Text = "";
+        }
+
+        protected void btnGonder_Click(object sender, EventArgs e)
+        {
+            iletisim ilet = new iletisim();
+            ilet.adsoyad = txtAd.Text;
+            ilet.mail = txtMail.Text;
+            ilet.konu = txtKonuBasligi.Text;
+            ilet.mesaj = txtMesaj.Text;
+            db.iletisim.Add(ilet);
+            db.SaveChanges();
+            Temizle();
+        }
+
     }
 }

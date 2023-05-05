@@ -18,5 +18,6 @@ namespace CvEntityProje.model
         public string adsoyad { get; set; }
         public string mail { get; set; }
         public string mesaj { get; set; }
+        public string konu { get; set; }
     }
 }
