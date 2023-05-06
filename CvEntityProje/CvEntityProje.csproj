@@ -77,7 +77,10 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="deneyimler.aspx" />
+    <Content Include="iletisimAdmin.aspx" />
+    <Content Include="mesajDetay.aspx" />
     <Content Include="yeniYetenek.aspx" />
+    <Content Include="yetenekGuncelle.aspx" />
     <Content Include="yeteneklerim.aspx" />
     <Content Include="model\CvEntityContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -101,6 +104,7 @@
     <Content Include="web\images\g3.jpg" />
     <Content Include="web\index.html" />
     <Content Include="web\w3layouts-License.txt" />
+    <Content Include="yetenekSil.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="admin.Master.cs">
@@ -124,12 +128,33 @@
     <Compile Include="deneyimler.aspx.designer.cs">
       <DependentUpon>deneyimler.aspx</DependentUpon>
     </Compile>
+    <Compile Include="iletisimAdmin.aspx.cs">
+      <DependentUpon>iletisimAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="iletisimAdmin.aspx.designer.cs">
+      <DependentUpon>iletisimAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mesajDetay.aspx.cs">
+      <DependentUpon>mesajDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mesajDetay.aspx.designer.cs">
+      <DependentUpon>mesajDetay.aspx</DependentUpon>
+    </Compile>
     <Compile Include="yeniYetenek.aspx.cs">
       <DependentUpon>yeniYetenek.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="yeniYetenek.aspx.designer.cs">
       <DependentUpon>yeniYetenek.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yetenekGuncelle.aspx.cs">
+      <DependentUpon>yetenekGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yetenekGuncelle.aspx.designer.cs">
+      <DependentUpon>yetenekGuncelle.aspx</DependentUpon>
     </Compile>
     <Compile Include="yeteneklerim.aspx.cs">
       <DependentUpon>yeteneklerim.aspx</DependentUpon>
@@ -169,6 +194,13 @@
       <DependentUpon>CvEntityContext.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="yetenekSil.aspx.cs">
+      <DependentUpon>yetenekSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yetenekSil.aspx.designer.cs">
+      <DependentUpon>yetenekSil.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="model\CvEntityContext.edmx">
