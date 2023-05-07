@@ -5,6 +5,14 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="CvEntityDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="admin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ad" Type="varchar" MaxLength="15" />
+          <Property Name="sifre" Type="varchar" MaxLength="15" />
+        </EntityType>
         <EntityType Name="adres">
           <Key>
             <PropertyRef Name="id" />
@@ -50,6 +58,7 @@
           <Property Name="derece" Type="tinyint" />
         </EntityType>
         <EntityContainer Name="CvEntityDBModelStoreContainer">
+          <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="adres" EntityType="Self.adres" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="calismalar" EntityType="Self.calismalar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="hakkinda" EntityType="Self.hakkinda" Schema="dbo" store:Type="Tables" />
@@ -110,7 +119,16 @@
           <EntitySet Name="hakkinda" EntityType="Self.hakkinda" />
           <EntitySet Name="iletisim" EntityType="Self.iletisim" />
           <EntitySet Name="yetenekler" EntityType="Self.yetenekler" />
+          <EntitySet Name="admin" EntityType="CvEntityDBModel.admin" />
         </EntityContainer>
+        <EntityType Name="admin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ad" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="sifre" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -163,6 +181,15 @@
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="yetenek" ColumnName="yetenek" />
                 <ScalarProperty Name="derece" ColumnName="derece" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="admin">
+            <EntityTypeMapping TypeName="CvEntityDBModel.admin">
+              <MappingFragment StoreEntitySet="admin">
+                <ScalarProperty Name="sifre" ColumnName="sifre" />
+                <ScalarProperty Name="ad" ColumnName="ad" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

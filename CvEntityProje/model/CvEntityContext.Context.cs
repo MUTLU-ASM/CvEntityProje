@@ -30,5 +30,6 @@ namespace CvEntityProje.model
         public virtual DbSet<hakkinda> hakkinda { get; set; }
         public virtual DbSet<iletisim> iletisim { get; set; }
         public virtual DbSet<yetenekler> yetenekler { get; set; }
+        public virtual DbSet<admin> admin { get; set; }
     }
 }

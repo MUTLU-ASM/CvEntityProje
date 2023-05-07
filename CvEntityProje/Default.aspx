@@ -36,7 +36,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="sidenav text-center">
         <div class="side_top">
             <img src="web/images/about.jpg" alt="news image" class="img-fluid navimg">
-            <h1 class="top_hd mt-2"><a href="Default.aspx">Asım Mutlu</a></h1>
+            <h1 class="top_hd mt-2"><a href="login.aspx">Asım Mutlu</a></h1>
             <p class="top_hdp mt-2">Junior Full Stack Developer</p>
         </div>
         <!-- header -->
@@ -46,7 +46,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <label for="drop" class="toggle">Menu</label>
                     <input type="checkbox" id="drop">
                     <ul class="menu">
-                        <li class="active"><a href="#home" class="scroll">Anasayfa</a></li>
+                        <li class="mt-sm-3"><a href="#home" class="scroll">Anasayfa</a></li>
                         <li class="mt-sm-3"><a href="#about" class="scroll">Eğitim</a></li>
                         <li class="mt-sm-3"><a href="#services" class="scroll">Yeteneklerim</a></li>
                         <li class="mt-sm-3"><a href="#news" class="scroll">Deneyimlerim</a></li>
